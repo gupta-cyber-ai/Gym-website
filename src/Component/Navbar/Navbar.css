@@ -1,0 +1,399 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.navbar {
+  background: transparent;
+  border-bottom: 1px solid transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 18px 0;
+  transition: all 0.3s ease;
+}
+.navbar-scrolled {
+  background: rgba(15, 23, 42, 0.95);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ============ Logo Styles ============ */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.logo-icon {
+  font-size: 28px;
+  color: #10b981;
+  filter: drop-shadow(0 0 8px rgba(16, 185, 129, 0.3));
+}
+
+.logo-text {
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.logo-text span {
+  color: #10b981;
+}
+
+/* ============ Menu Links ============ */
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.navbar-menu li a {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  transition: all 0.25s ease;
+}
+
+.navbar-menu li a:hover {
+  color: #ffffff;
+}
+
+.navbar-menu li a.active,
+.navbar-menu li a:focus {
+  color: #10b981;
+}
+
+/* ============ Desktop Buttons ============ */
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.btn-login {
+  background: transparent;
+  color: white;
+  border: none;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.btn-login:hover {
+  color: #ffffff;
+}
+
+.btn-signup {
+  background: #10b981;
+  color: #0f172a;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);
+}
+
+.btn-signup:hover {
+  background: #34d399;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(16, 185, 129, 0.3);
+}
+/* ================================
+   PROFILE & LOGOUT STYLES
+================================ */
+
+/* Desktop User Profile */
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.user-icon {
+  font-size: 28px;
+  color: #ff4d4d;
+}
+
+.user-name {
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Desktop Logout Button */
+.btn-logout {
+  padding: 8px 20px;
+  background: #ff4d4d;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-logout:hover {
+  background: #ff1a1a;
+  transform: scale(1.05);
+}
+
+/* Mobile User Name */
+.mobile-user-name {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px 0;
+}
+
+.mobile-user-name svg {
+  font-size: 24px;
+  color: #ff4d4d;
+}
+
+/* Mobile Logout Button */
+.btn-logout-mobile {
+  padding: 10px 30px;
+  background: #ff4d4d;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.btn-logout-mobile:hover {
+  background: #ff1a1a;
+}
+
+/* ============ Mobile Buttons (Hidden on Desktop) ============ */
+.mobile-buttons {
+  display: none;
+}
+
+/* ============ Mobile Toggle ============ */
+.navbar-toggle {
+  display: none;
+  color: #ffffff;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+/* ============ Overlay ============ */
+.navbar-overlay {
+  display: none;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - Mobile (max-width: 768px)
+   ============================================ */
+@media (max-width: 768px) {
+  
+  .navbar-toggle {
+    display: block;
+  }
+
+  /* 👇 SIDE MENU (Right se aayega) */
+  .navbar-menu {
+    position: fixed;
+    top: 0;
+    right: -300px;           /* Initially right side mein hidden */
+    width: 280px;            /* Sidebar width */
+    height: 100vh;           /* Full height */
+    background: #0f172a;
+    border-left: 1px solid rgba(255, 255, 255, 0.08);
+    flex-direction: column;
+    align-items: flex-start; /* Left aligned links */
+    padding: 80px 30px 30px 30px; /* Top pe space for close button */
+    gap: 8px;
+    transition: right 0.35s ease-in-out;
+    z-index: 1000;
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
+  }
+
+  /* Jab menu ACTIVE ho (slide in) */
+  .navbar-menu.active {
+    right: 0;
+  }
+
+  /* Menu links styling for mobile */
+  .navbar-menu li {
+    width: 100%;
+  }
+
+  .navbar-menu li a {
+    display: block;
+    padding: 14px 16px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #94a3b8;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+  }
+
+  .navbar-menu li a:hover {
+    background: rgba(16, 185, 129, 0.1);
+    color: #10b981;
+    padding-left: 22px;     /* Hover pe thoda right shift */
+  }
+
+  /* 👇 Mobile Buttons VISIBLE */
+  /* ==================== MOBILE BUTTONS ==================== */
+.mobile-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+  margin-top: 25px;
+  padding-top: 25px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.btn-login-mobile {
+  background: transparent;
+  color: #94a3b8 !important;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  padding: 14px 20px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+}
+
+.btn-login-mobile:hover {
+  color: #ffffff !important;
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Join Now Button - Mobile */
+a.btn-signup-mobile,
+.btn-signup-mobile {
+  background: #10b981 !important;
+  color: #0f172a !important;
+  padding: 14px 20px;
+  font-size: 15px;
+  font-weight: 700;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  width: 100%;
+  text-align: center;
+  text-decoration: none !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 16px rgba(16, 185, 129, 0.3);
+}
+
+a.btn-signup-mobile:hover,
+.btn-signup-mobile:hover {
+  background: #34d399 !important;
+  color: #0f172a !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(16, 185, 129, 0.4);
+}
+
+  /* Desktop buttons hide on mobile */
+  .navbar-actions {
+    display: none;
+  }
+
+  /* 👇 Dark Overlay (background dim) */
+  .navbar-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
+
+  .navbar-overlay.active {
+    display: block;
+  }
+}
+
+a.btn-signup,
+a.btn-signup:hover,
+a.btn-signup:focus,
+a.btn-signup:visited {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a.btn-signup-mobile,
+a.btn-signup-mobile:hover,
+a.btn-signup-mobile:focus,
+a.btn-signup-mobile:visited {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+a.btn-login,
+a.btn-login:hover,
+a.btn-login:focus,
+a.btn-login:visited {
+  text-decoration: none !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a.btn-login-mobile,
+a.btn-login-mobile:hover,
+a.btn-login-mobile:focus,
+a.btn-login-mobile:visited {
+  text-decoration: none !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}

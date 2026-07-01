@@ -1,0 +1,393 @@
+.testimonials {
+  background: #0f172a;
+  color: #ffffff;
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+  scroll-margin-top: 80px;
+}
+
+.testimonials::before {
+  content: "";
+  position: absolute;
+  top: -120px;
+  left: -120px;
+  width: 350px;
+  height: 350px;
+  background: rgba(16, 185, 129, 0.07);
+  filter: blur(120px);
+  border-radius: 50%;
+}
+
+.testimonials::after {
+  content: "";
+  position: absolute;
+  bottom: -100px;
+  right: -100px;
+  width: 300px;
+  height: 300px;
+  background: rgba(16, 185, 129, 0.05);
+  filter: blur(100px);
+  border-radius: 50%;
+}
+
+/* ========== Center Header ========== */
+.testimonials-header {
+  max-width: 700px;
+  margin: 0 auto 60px;
+  padding: 0 24px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.testimonials-tag {
+  display: inline-block;
+  background: rgba(16, 185, 129, 0.12);
+  color: #10b981;
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 18px;
+}
+
+.testimonials-header h2 {
+  font-size: 42px;
+  line-height: 1.15;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 16px;
+}
+
+.testimonials-header h2 span {
+  color: #10b981;
+}
+
+.testimonials-subtitle {
+  color: #94a3b8;
+  font-size: 16px;
+  line-height: 1.7;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ========== Container ========== */
+.testimonials-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  position: relative;
+  z-index: 2;
+}
+
+/* ========== Slider Wrapper ========== */
+.testimonials-slider-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  position: relative;
+}
+
+/* ========== Arrows ========== */
+.testi-arrow {
+  width: 60px;
+  height: 60px;
+  min-width: 60px;
+  border-radius: 50%;
+  border: 2px solid rgba(16, 185, 129, 0.3);
+  background: rgba(16, 185, 129, 0.1);
+  color: #10b981;
+  font-size: 50px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  line-height: 1;
+  z-index: 5;
+  font-family: Arial, sans-serif;
+}
+
+
+.testi-arrow span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  margin-top: -6px;
+}
+.testi-arrow:hover {
+  background: #10b981;
+  color: #0f172a;
+  border-color: #10b981;
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(16, 185, 129, 0.3);
+}
+
+.testi-arrow-disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.testi-arrow-disabled:hover {
+  background: rgba(16, 185, 129, 0.1);
+  color: #10b981;
+  transform: none;
+  box-shadow: none;
+}
+
+/* ========== Track ========== */
+.testimonials-track-wrapper {
+  overflow: hidden;
+  width: 100%;
+  border-radius: 20px;
+}
+
+.testimonials-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+/* ========== Card Wrapper ========== */
+.testi-card-wrapper {
+  padding: 0 12px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+/* ========== Card ========== */
+.testi-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 24px;
+  padding: 32px 28px;
+  height: 100%;
+  transition: all 0.35s ease;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.testi-card:hover {
+  border-color: rgba(16, 185, 129, 0.25);
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+/* ========== Quote Icon ========== */
+.testi-quote-icon {
+  font-size: 60px;
+  font-weight: 800;
+  color: #10b981;
+  line-height: 1;
+  margin-bottom: 10px;
+  opacity: 0.3;
+  font-family: Georgia, serif;
+}
+
+/* ========== Stars ========== */
+.testi-stars {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 18px;
+}
+
+.star {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.15);
+}
+
+.star-filled {
+  color: #fbbf24;
+  text-shadow: 0 0 6px rgba(251, 191, 36, 0.3);
+}
+
+/* ========== Review Text ========== */
+.testi-review {
+  color: #94a3b8;
+  font-size: 15px;
+  line-height: 1.8;
+  flex-grow: 1;
+  margin-bottom: 24px;
+}
+.testi-card-wrapper {
+  padding: 0 12px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.testi-card {
+  max-width: 700px;
+  width: 100%;
+  margin: 0 auto;
+}
+/* ========== User Info ========== */
+.testi-user {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.testi-user-image {
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid rgba(16, 185, 129, 0.3);
+}
+
+.testi-user-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.testi-user-info h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 2px;
+}
+
+.testi-user-info span {
+  font-size: 13px;
+  color: #10b981;
+  font-weight: 600;
+}
+
+/* ========== Dots ========== */
+.testi-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.testi-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.testi-dot:hover {
+  background: rgba(16, 185, 129, 0.5);
+}
+
+.testi-dot-active {
+  background: #10b981;
+  width: 28px;
+  border-radius: 999px;
+  box-shadow: 0 0 10px rgba(16, 185, 129, 0.4);
+}
+/* ========== Mobile Stack Layout ========== */
+.testi-mobile-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.testi-mobile-grid .testi-card {
+  max-width: 100%;
+}
+
+/* Hide slider on mobile */
+@media (max-width: 768px) {
+  .testimonials-slider-wrapper {
+    display: none;
+  }
+
+  .testi-dots {
+    display: none;
+  }
+
+  .testi-mobile-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+/* Hide mobile grid on desktop */
+@media (min-width: 769px) {
+  .testi-mobile-grid {
+    display: none;
+  }
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 992px) {
+  .testimonials-header h2 {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonials {
+    padding: 70px 0;
+  }
+
+  .testimonials-header {
+    margin-bottom: 40px;
+  }
+
+  .testimonials-header h2 {
+    font-size: 30px;
+  }
+
+  .testimonials-subtitle {
+    font-size: 15px;
+  }
+
+  .testi-arrow {
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    font-size: 26px;
+  }
+
+  .testi-card {
+    padding: 24px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonials-header h2 {
+    font-size: 26px;
+  }
+
+  .testi-arrow {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    font-size: 22px;
+  }
+
+  .testi-card {
+    padding: 22px 18px;
+  }
+
+  .testi-quote-icon {
+    font-size: 45px;
+  }
+
+  .testi-review {
+    font-size: 14px;
+  }
+}

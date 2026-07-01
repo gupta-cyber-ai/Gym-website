@@ -1,0 +1,195 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  background: url("C:\Users\santo\React 1\gym-site\src\Assest\Hero_img.jpg")
+    center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  padding: 100px 8%;
+  color: #fff;
+  overflow: hidden;
+  scroll-margin-top: 80px;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+}
+
+.hero-tag {
+  display: inline-block;
+  background: #0f172a;
+  color: #10b981;
+  /* border: 1px solid rgba(255, 77, 0, 0.4); */
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-size: 14px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.hero-content h1 {
+  font-size: 62px;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  font-weight: 800;
+}
+.hero-content h1 span {
+  color: #10b981;
+}
+.hero-text {
+  font-size: 18px;
+  color: #ddd;
+  line-height: 1.7;
+  margin-bottom: 30px;
+  max-width: 600px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.btn {
+  padding: 14px 28px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: 0.3s ease;
+}
+
+.btn-primary {
+  background: #0f172a;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #0f172a;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+.btn-secondary:hover {
+  background: #fff;
+  color: #111;
+  transform: translateY(-2px);
+}
+
+.hero-stats {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.stat-box {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 18px 24px;
+  border-radius: 12px;
+  backdrop-filter: blur(6px);
+  min-width: 160px;
+}
+
+.stat-box h2 {
+  font-size: 28px;
+  color: #10b981;
+  margin-bottom: 6px;
+}
+
+.stat-box p {
+  font-size: 14px;
+  color: #ddd;
+}
+a.hero-btn-primary,
+a.hero-btn-primary:hover,
+a.hero-btn-primary:focus,
+a.hero-btn-primary:visited {
+  text-decoration: none !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a.hero-btn-secondary,
+a.hero-btn-secondary:hover,
+a.hero-btn-secondary:focus,
+a.hero-btn-secondary:visited {
+  text-decoration: none !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .hero-content h1 {
+    font-size: 48px;
+  }
+
+  .hero-text {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 90px 6%;
+    min-height: 90vh;
+  }
+
+  .hero-content h1 {
+    font-size: 38px;
+  }
+
+  .hero-text {
+    font-size: 15px;
+  }
+
+  .hero-stats {
+    gap: 12px;
+  }
+
+  .stat-box {
+    min-width: 140px;
+    padding: 16px 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 30px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 220px;
+  }
+
+  .stat-box {
+    width: 100%;
+  }
+}
+
