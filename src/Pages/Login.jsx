@@ -150,9 +150,18 @@ const Login = () => {
                   <span>Remember me</span>
                 </label>
 
-                <a href="#" className="login-forgot">
-                  Forgot Password?
-                </a>
+              <button 
+              type="button" 
+              style={{
+                background: "none",
+                border: "none", 
+                color: "white",
+                textDecoration: "none",
+                cursor: "pointer"
+              }}
+            >
+              Forgot Password?
+            </button>
               </div>
 
               <button type="submit" className="login-submit-btn">

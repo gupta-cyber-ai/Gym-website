@@ -193,8 +193,8 @@ const Signup = () => {
               <div className="signup-terms">
                 <input type="checkbox" id="terms" required />
                 <label htmlFor="terms">
-                  I agree to the <a href="#">Terms & Conditions</a> and{" "}
-                  <a href="#">Privacy Policy</a>
+                  I agree to the <a>Terms & Conditions</a> and{" "}
+                  <a>Privacy Policy</a>
                 </label>
               </div>
 

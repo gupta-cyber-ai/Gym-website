@@ -1,6 +1,7 @@
 import React from "react";
 import "./Footer.css";
-import { FaDumbbell, FaBars, FaTimes, FaUserCircle } from 'react-icons/fa';
+// import { FaDumbbell,  } from 'react-icons/fa';
+import {  FaDumbbell,FaInstagram, FaFacebook } from "react-icons/fa";
 
 
 export const Footer = () => {
@@ -24,18 +25,19 @@ export const Footer = () => {
             </p>
 
             <div className="footer-social">
-              <a href="#" className="footer-social-link">
+              <a className="footer-social-link">
                 📘
               </a>
-              <a href="#" className="footer-social-link">
+              <a className="footer-social-link">
                 📸
               </a>
-              <a href="#" className="footer-social-link">
+              <a className="footer-social-link">
                 🐦
               </a>
-              <a href="#" className="footer-social-link">
+              <a className="footer-social-link">
                 📺
               </a>
+
             </div>
           </div>
 

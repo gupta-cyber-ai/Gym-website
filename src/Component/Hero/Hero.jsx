@@ -1,7 +1,7 @@
 import React from "react";
 import "./Hero.css";
 import { Link } from 'react-router-dom';
-import Hero_img from "../../Assest/Hero_img.webp";
+// import Hero_img from "../../Assest/Hero_img.webp";
 
 
 const Hero = () => {
