@@ -1,7 +1,7 @@
 import React from "react";
 import "./About.css";
-import aboutImage1 from "../../Assest/about1_img.jpg";
-import aboutImage2 from "../../Assest/about2_img.jpg";
+import aboutImage1 from "../../Assest/about1_img.webp";
+import aboutImage2 from "../../Assest/about2_img.webp";
 
 export const About = () => {
   return (

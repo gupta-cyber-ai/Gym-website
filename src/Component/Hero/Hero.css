@@ -1,7 +1,7 @@
 .hero {
   position: relative;
   min-height: 100vh;
-  background: url('../../Assest/Hero_img.jpg')
+  background: url('../../Assest/Hero_img.webp')
     center/cover no-repeat;
   display: flex;
   align-items: center;

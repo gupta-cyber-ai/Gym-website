@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import "./Member.css";
-import memberImage1 from "../../Assest/member_img1.jpg";
-import memberImage2 from "../../Assest/member_img2.jpg";
-import memberImage3 from "../../Assest/member_img3.jpg";
-import memberImage4 from "../../Assest/member_img4.jpg";
-import memberImage5 from "../../Assest/member_img5.jpg";
-import memberImage6 from "../../Assest/member_img6.jpg";
+import memberImage4 from "../../Assest/member_img4.webp";
+import memberImage3 from "../../Assest/member_img3.webp";
+import memberImage5 from "../../Assest/member_img5.webp";
+import memberImage2 from "../../Assest/member_img2.webp";
+import memberImage6 from "../../Assest/member_img6.webp";
+import memberImage1 from "../../Assest/member_img1.webp";
 
 export const Member = () => {
   const members = [
